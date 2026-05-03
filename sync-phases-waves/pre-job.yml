@@ -3,7 +3,8 @@ kind: Job
 metadata:
   name: health-check-pre-job
   annotations:
-    argocd.argoproj.io/hook: PreSync    # pre sync
+    argocd.argoproj.io/hook: PreSync                         # pre sync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded     # hook succeeded
 spec:
   template:
     spec:
