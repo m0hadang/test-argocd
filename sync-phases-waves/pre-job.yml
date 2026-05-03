@@ -8,7 +8,7 @@ metadata:
 
     # HOOK DELETE POLICY
     # argocd.argoproj.io/hook-delete-policy: HookSucceeded
-    argocd.argoproj.io/hook-delete-policy: HookFailed
+    # argocd.argoproj.io/hook-delete-policy: HookFailed
 spec:
   template:
     spec:
@@ -17,6 +17,6 @@ spec:
           image: busybox
           command: ["/bin/sh", "-c"]
           # flip exit 0 -> exit 1 to trigger the SyncFail hook instead of PostSync
-          args: ["echo 'PreSync ran'; exit 1"]
+          args: ["echo 'PreSync ran'; exit 0"]
       restartPolicy: Never
   backoffLimit: 0
