@@ -1,0 +1,10 @@
+{
+    "cluster": {
+      "owner": "mohadang",
+      "name": "staging",
+      "path": "helm/nginx",
+      "source_type": "helm", 
+      "address": "https://kubernetes.default.svc",
+      "namespace": "staging-ns"
+    }
+  }
